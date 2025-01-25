@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-star-qg",
   "description": "星星要的 头衔发放和禁言",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "contributors": [
     "LectWolf <2242299685@qq.com>"
   ],

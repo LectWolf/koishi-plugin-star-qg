@@ -85,7 +85,7 @@ export function apply(ctx: Context, config: Config) {
         return reply(session, "invalidtitle");
       }
 
-      await session.bot.internal.set_group_special_title(
+      await session.bot.internal.setGroupSpecialTitle(
         session.guildId,
         qq,
         title,
@@ -116,7 +116,7 @@ export function apply(ctx: Context, config: Config) {
       }
       const muteTime = parseTimeToSeconds(time);
 
-      await session.bot.internal.set_group_ban(session.guildId, qq, muteTime);
+      await session.bot.internal.setGroupBan(session.guildId, qq, muteTime);
       return reply(session, ".success", { qq, time: muteTime });
     });
 }
