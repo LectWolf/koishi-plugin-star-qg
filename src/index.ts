@@ -1,11 +1,21 @@
-import { Context, Schema } from 'koishi'
+import { Context, Schema } from "koishi";
+import zh from "./locales/zh-CN.yml";
+import * as common from "./common";
+import { initDataBase } from "./database";
+import { Config } from "./config";
 
-export const name = 'star-qg'
+export const name = "star-qg";
+export const reusable = true;
 
-export interface Config {}
+export * from "./config";
 
-export const Config: Schema<Config> = Schema.object({})
+export function apply(ctx: Context, config: Config) {
+  // 加载语言
+  ctx.i18n.define("zh-CN", zh);
+  initDataBase(ctx, config);
 
-export function apply(ctx: Context) {
-  // write your plugin here
+  ctx
+    .intersect((session) => session.subtype === "group")
+    .platform("onebot")
+    .plugin(common, config);
 }

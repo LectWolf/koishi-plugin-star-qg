@@ -1,0 +1,40 @@
+commands:
+  add_admin:
+    description: 添加管理员
+    messages:
+      format: "格式: 添加管理员 [QQ]"
+      invalidqq: "请输入正确的QQ号"
+      hasexist: |-
+        管理员【{qq}】已是该群管理
+        笨蛋！
+      success: |-
+        已添加管理员 【{qq}】
+
+  remove_admin:
+    description: 删除管理员
+    messages:
+      format: "格式: 删除管理员 [QQ]"
+      invalidqq: "请输入正确的QQ号"
+      notexist: |-
+        管理员【{qq}】不是该群管理
+        笨蛋！
+      success: |-
+        已删除管理员 【{qq}】"
+
+  add_title:
+    description: 添加头衔
+    messages:
+      format: "格式: 添加头衔 [QQ] [头衔]"
+      invalidqq: "请输入正确的QQ号"
+      invalidtitle: "头衔不能为空"
+      success: |-
+        已为【{qq}】添加头衔 【{title}】
+
+  mute:
+    description: 禁言
+    messages:
+      format: "格式: 禁言 [QQ] [时间]"
+      invalidqq: "请输入正确的QQ号"
+      invalidtime: "请输入正确的时间（单位：秒）"
+      success: |-
+        已禁言【{qq}】，时长 【{time}】秒

@@ -1,22 +1,35 @@
 {
   "name": "koishi-plugin-star-qg",
-  "description": "星星要的",
+  "description": "星星要的 头衔发放和禁言",
   "version": "0.0.1",
+  "contributors": [
+    "LectWolf <2242299685@qq.com>"
+  ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
     "dist"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LectWolf/koishi-plugin-star-qg.git"
+  },
   "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "onebot"
   ],
+  "koishi": {
+    "description": {
+      "zh": "星星要的 头衔发放和禁言"
+    }
+  },
   "devDependencies": {},
   "peerDependencies": {
-    "koishi": "^4.18.0"
+    "koishi": "^4.17.4"
   }
 }
